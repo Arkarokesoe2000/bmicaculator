@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.page{
+    display: flex;
+    justify-content: center;
+}
+#container{
+    border: 1px solid gray;
+    margin: 20px 400px;
+    border-radius: 5px;
+}
+h3{
+    padding: 15px;
+    text-align: center;
+    background-color: #26418F;
+    color: white;
+}
+h5{
+    padding: 50px 50px 10px;
+}
+.form{
+    padding: 0px 100px;
+}
+#feet, #inch{
+    width: 100px;
+    height: 25px;
+    padding-left: 5px;
+}
+.feet-box{
+    display: inline-block;
+    padding:  0px 30px;
+}
+.weight-box{
+    padding: 0px 130px;
+    padding-bottom: 30px;
+}
+#pound{
+    width: 100px;
+    height: 25px;
+    padding-left: 5px;
+}
+.caculate-box{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#caculate{
+    width: 150px;
+    height: 38px;
+    border: 0px;
+    border-radius: 12px;
+    background-color: #26418F;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+}
+#caculate:hover{
+    background-color: silver;
+    color: #26418F;
+}
+#BMI{
+    text-align: center;
+    padding-bottom: 30px;
+}

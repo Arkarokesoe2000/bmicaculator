@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Caculator</title>
+    <link rel="stylesheet" href="bmi.css">
+</head>
+<body>
+    <div class="page">
+        <div id="container">
+            <h3>Adult BMI Caculator</h3>
+            <h5>1.Height:</h5>
+            <form class="form">
+                <div class="feet-box">
+                    <label for="feet">Feet</label><br>
+                    <input type="number" id="feet" name="feet">
+                </div>
+                <div class="feet-box">
+                    <label for="inch">Inches</label><br>
+                    <input type="number" id="inch" name="inch">
+                </div>
+            </form>
+            <h5>2.Weight:</h5>
+            <div class="weight-box">
+                <label for="pound">Pound</label><br>
+                <input type="number" id="pound" name="pound">
+            </div>
+            <div class="caculate-box">
+                <button onclick= "bmiCaculator()" id="caculate" name="caculate">Caculate</button>
+            </div>
+            <p id="BMI"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function bmiCaculator() {
+            let feet = document.getElementById("feet").value;
+            let inch = document.getElementById("inch").value;
+            let pound = document.getElementById("pound").value;
+            let Height = parseInt(feet * 12) + parseInt(inch);
+            
+            let bmi = (pound * 703) / (Height * Height);
+            let bmiDec = bmi.toFixed(2);
+            
+
+            if(bmiDec < 18) {
+                document.getElementById("BMI").innerHTML = "Your BMI is: " + bmiDec + ".You are Under weight.";
+
+            } else if(bmiDec < 25) {
+                document.getElementById("BMI").innerHTML = "Your BMI is: " + bmiDec + ".You are Healthy.";
+            }
+            else if(bmiDec < 30) {
+                document.getElementById("BMI").innerHTML = "Your BMI is: " + bmiDec + ".You are Over weight.";
+            } else(document.getElementById("BMI").innerHTML = "Your BMI is: " + bmiDec + ".You are Obese.");
+    }
+    </script>
+</body>
+</html>
